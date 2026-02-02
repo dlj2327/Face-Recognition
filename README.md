@@ -33,26 +33,24 @@ pip install opencv-python mediapipe numpy其他依赖（如果有）可根据运
 
 ---
 
-## 项目结构
 
-大致目录结构如下（省略部分文件）：
+###项目目录结构如下（省略部分文件）：
 
 Face-Recognition/
 ├── OpenCV/
-│   ├── data/                     # 各类 Haar 级联模型（人脸、眼睛、人体、车牌等）
-│   ├── body.jpg / face.jpg ...   # 测试图像
+│   ├── data/                     # 各类 Haar 级联模型类 Haar 级联模型睛、人体、   ├── body.jpg / face.jpg ...   #   #像
 │   ├── traffic.flv / video1.mp4  # 测试视频
-│   ├── t1_*.py ~ t8_*.py         # 多个 OpenCV 基础实验脚本
+│  
+│   ├1_*.py ~ t t1_*.py ~ t   # 多个 OpenCV 基础实验脚本
 │   ...
 ├── RK3568*/                      # RK3568 平台相关的人脸识别实验
-│   ├── RK*.py                    # 人脸识别主脚本
-│   ├── haarcascade_frontalface_default.xml
-│   ├── lbpcascade_animeface.xml
+│的人脸识别实验
+│*.py                    #                    #cascade_frontalface_default.xml
+│   ├──
+│   ├──ade_animeface.xml
 │   ├── names_mapping.json
-│   ├── trainer/trainer.yml       # 训练好的人脸识别模型
-├── hands/
-│   ├── handutil.py               # 基于 MediaPipe 的手部关键点检测封装
-│   ├── main.py                   # 手指数量识别主程序
-│   ├── fingers/0.png~5.png       # 对应 0~5 根手指的展示图片
-│   └── __pycache__/
-└── .idea/                        # 开发环境配置（可选）---
+│.json
+│└rainer/
+│       └── trainer.yml           # 训练 trainer.yml           # 训练ands/
+│il handutil         # 基于 MediaPipe               # 基于 MediaPipe                 # 手指数量识别主程序
+│   └── fingers/0.png   └── fingers/0.pngpng       # 对应 .idea/                        # 开                        # 开
