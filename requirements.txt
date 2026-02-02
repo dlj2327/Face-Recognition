@@ -1,0 +1,5 @@
+opencv-contrib-python==4.7.0.72
+numpy==1.24.4
+Pillow==10.2.0
+
+
