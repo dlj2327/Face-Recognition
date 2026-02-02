@@ -1,4 +1,4 @@
-## Face-Recognition（隐私安全版）
+## Face-Recognition
 
 本仓库只包含**人脸检测/人脸识别**相关代码，并默认避免把任何可能涉及隐私的数据提交到 GitHub：
 
@@ -12,15 +12,6 @@
 
 ### 环境（Python 3.8）
 
-你提到的解释器路径：
-
-- `C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python.exe`
-
-安装依赖（PowerShell）：
-
-```powershell
-& "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python.exe" -m pip install -r requirements.txt
-```
 
 ### 1) RK3568 / PC：LBPH 人脸识别（采集→训练→识别）
 
@@ -28,43 +19,29 @@
 
 - **采集（会写入本地数据目录，且默认被 .gitignore 忽略）**
 
-```powershell
-& "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python.exe" rk3568_face_recognition\app.py collect --name "user1" --camera-index 0
-```
+ rk3568_face_recognition\app.py collect --name "user1" --camera-index 0
+
 
 - **训练（输出模型到本地 data/trainer/，默认忽略）**
 
-```powershell
-& "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python.exe" rk3568_face_recognition\app.py train
-```
+ rk3568_face_recognition\app.py train
 
 - **实时识别（摄像头）**
 
-```powershell
-& "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python.exe" rk3568_face_recognition\app.py recognize --camera-index 0
-```
+ rk3568_face_recognition\app.py recognize --camera-index 0
+
 
 ### 2) OpenCV：通用人脸检测（图片/视频/摄像头）
 
 脚本：`opencv_face_detection/detect_faces.py`
 
 - 图片：
-
-```powershell
-& "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python.exe" opencv_face_detection\detect_faces.py --image "path\\to\\image.jpg"
-```
-
-- 视频：
-
-```powershell
-& "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python.exe" opencv_face_detection\detect_faces.py --video "path\\to\\video.mp4"
-```
+opencv_face_detection\detect_faces.py --image "path\\to\\image.jpg"
 
 - 摄像头：
 
-```powershell
-& "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python.exe" opencv_face_detection\detect_faces.py --camera 0
-```
+opencv_face_detection\detect_faces.py --camera 0
+
 
 ### 目录结构
 
